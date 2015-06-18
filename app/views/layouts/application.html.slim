@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title AddressBook
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    = csrf_meta_tags 
+
+  body
+    #main_container.fluid-container
+      #header.navbar-header
+        a.navbar-brand href=root_path Address Book
+      
+      p.notice 
+        = notice
+      p.alert
+        = alert
+
+      = yield 
