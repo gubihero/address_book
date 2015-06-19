@@ -14,16 +14,16 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user_id: 
-  name: MyString
+contact1:
+  user: user1
+  name: test1
   email: MyString
   phone: MyString
   address: MyText
 
-two:
-  user_id: 
-  name: MyString
+contact2:
+  user: user2
+  name: test2
   email: MyString
   phone: MyString
   address: MyText
