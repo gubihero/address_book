@@ -6,19 +6,16 @@
         - @contact.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :user
-    = f.text_field :user
-  .field
+  .field.form-group
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: "form-control"
+  .field.form-group
     = f.label :email
-    = f.text_field :email
-  .field
+    = f.text_field :email, class: "form-control"
+  .field.form-group
     = f.label :phone
-    = f.text_field :phone
-  .field
+    = f.text_field :phone, class: "form-control"
+  .field.form-group
     = f.label :address
-    = f.text_area :address
+    = f.text_area :address, class: "form-control"
   .actions = f.submit

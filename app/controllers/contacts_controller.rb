@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts
   def index
-    @contacts = current_user.contacts.paginate(page: params[:page], per_page: 20)
+    @contacts = current_user.contacts.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /contacts/1
@@ -23,6 +23,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   def create
     @contact = Contact.new(contact_params)
+    @contact.user_id = current_user.id
 
     if @contact.save
       redirect_to @contact, notice: 'Contact was successfully created.'

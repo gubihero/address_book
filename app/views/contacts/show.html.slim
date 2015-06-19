@@ -1,21 +1,32 @@
 p#notice = notice
 
-p
-  strong User:
-  = @contact.user
-p
-  strong Name:
-  = @contact.name
-p
-  strong Email:
-  = @contact.email
-p
-  strong Phone:
-  = @contact.phone
-p
-  strong Address:
-  = @contact.address
+h1 Contact
 
+table.table.table-striped
+
+  thead 
+    tr
+      th 
+      th 
+
+  tbody
+    tr
+      td 
+        strong Name:
+      td = @contact.name
+    tr
+      td
+        strong Email:
+      td = @contact.email
+    tr
+      td 
+        strong Phone:
+      td = @contact.phone
+    tr
+      td
+        strong Address:
+      td = @contact.address
+  
 = link_to 'Edit', edit_contact_path(@contact)
 '|
 = link_to 'Back', contacts_path

@@ -2,10 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pagination {
-  .previous_page { background:#7777ff; color:white }
-  .previous_page.disabled { background: white; color: #777 }
-  .current { background: yellow }
-  .next_page { background: #7777ff; color: white }
-  .next_page.disabled { background: white; color: #777 }
+a {
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: #fff;
+  }
 }
+
+
+.pagination {
+  .previous_page { 
+    color: #337ab7;  
+  }
+  .previous_page.disabled { 
+    color:#115773;
+  }
+  .current {  
+    color:#115773;
+  }
+  .next_page { 
+    color: #337ab7; 
+  }
+  .next_page.disabled { 
+    color:#115773;
+  }
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #dddddd;
+ }
