@@ -9,11 +9,27 @@ html
   body
     #main_container.fluid-container
       #header.navbar-header
-        a.navbar-brand href=root_path Address Book
+        = link_to "My Address Book", root_path, :class => 'navbar-brand'
+        - if user_signed_in?
+          ul.navbar-nav.nav.navbar-right
+            li
+              = link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' 
+            li
+              = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
+        - else
+          ul.navbar-nav.nav.navbar-right
+            li
+              = link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' 
+            li
+              = link_to "Login", new_user_session_path, :class => 'navbar-link'
       
-      p.notice 
-        = notice
-      p.alert
-        = alert
+     
 
-      = yield 
+      .row
+        #main_content.col-sm-12.col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+          p.notice 
+            = notice
+          p.alert
+            = alert
+
+          = yield 

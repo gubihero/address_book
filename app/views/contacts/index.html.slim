@@ -1,9 +1,8 @@
-h1 Listing contacts
+h1 Contacts
 
 table
   thead
     tr
-      th User
       th Name
       th Email
       th Phone
@@ -15,7 +14,6 @@ table
   tbody
     - @contacts.each do |contact|
       tr
-        td = contact.user
         td = contact.name
         td = contact.email
         td = contact.phone
